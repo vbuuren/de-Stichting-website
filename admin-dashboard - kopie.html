@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Admin dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#f6f7f9; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }
+    header, footer { padding:16px 20px; }
+    main { padding:20px; max-width:1000px; margin:0 auto; display:grid; gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+    h1 { margin:0; font-size:24px; }
+    .grid { display:grid; gap:12px; grid-template-columns:repeat(1, minmax(0,1fr)); }
+    @media (min-width:800px){ .grid{ grid-template-columns:repeat(3, 1fr);} }
+    a.tile { display:block; padding:16px; border:1px solid var(--line); border-radius:10px; text-decoration:none; color:inherit; background:#fafafa; }
+    a.tile h2 { margin:0 0 6px; font-size:18px; }
+    .muted { color:var(--muted); }
+    footer { text-align:center; color:var(--muted); font-size:12px; }
+    footer a { color:inherit; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header><a href="index.html" class="muted">← Terug naar overzicht</a></header>
+  <main>
+    <div class="card">
+      <h1>Admin dashboard</h1>
+      <div class="grid" style="margin-top:12px;">
+        <a class="tile" href="admin-leden.html">
+          <h2>👥 Leden</h2>
+          <p class="muted">Beheer leden, uitnodigen, resetten, bewerken.</p>
+        </a>
+        <a class="tile" href="admin-uitje-form.html">
+          <h2>🗓️ Uitjes</h2>
+          <p class="muted">Aanmaken, bewerken, kopiëren, verwijderen.</p>
+        </a>
+        <a class="tile" href="admin-instellingen.html">
+          <h2>⚙️ Instellingen</h2>
+          <p class="muted">Standaard AV‑PDF, teksten en thema.</p>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer>© 2025 De Stichting | <a href="#" target="_blank">Algemene Voorwaarden</a></footer>
+</body>
+</html>

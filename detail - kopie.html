@@ -1,0 +1,67 @@
+<!-- filename: detail.html -->
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Uitje detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#f6f7f9; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb; --brand:#0d6efd; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }
+    header, footer { padding:16px 20px; display:flex; justify-content:space-between; align-items:center; }
+    main { padding:20px; max-width:900px; margin:0 auto; display:grid; gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+    .thumb { height:220px; background:#ddd center/cover no-repeat; }
+    .content { padding:16px; }
+    .row { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; }
+    .muted { color:var(--muted); }
+    footer { text-align:center; color:var(--muted); font-size:12px; }
+    footer a { color:inherit; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title">Uitje detail</div>
+    <div class="actions"><a class="muted" href="index.html">⬅️ Terug</a></div>
+  </header>
+
+  <main>
+    <article class="card">
+      <div class="thumb" style="background-image:url('uploads/grachten.jpg');"></div>
+      <div class="content">
+        <div class="row">
+          <h1>Rondvaart Amsterdam</h1>
+          <div class="muted">12 okt 2025 • 13:00</div>
+        </div>
+        <p>Ontdek de grachten met gids. Startpunt: Prinsengracht 123, Amsterdam.</p>
+        <div class="row">
+          <a class="btn" href="#">Inschrijven</a>
+          <a class="btn" href="#">Afmelden</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="content">
+        <h2>Route & walking route</h2>
+        <p class="muted">Plan je route in Google Maps vanaf je huidige locatie of een gekozen vertrekpunt.</p>
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Prinsengracht+123,Amsterdam&travelmode=walking" target="_blank" rel="noopener">Plan je route in Google Maps</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="content">
+        <h2>Deelnemers</h2>
+        <ul>
+          <li>Marcel</li>
+          <li>Sophie</li>
+          <li>Youssef</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer>© 2025 De Stichting | <a href="uploads/voorwaarden.pdf" target="_blank">Algemene Voorwaarden</a></footer>
+</body>
+</html>

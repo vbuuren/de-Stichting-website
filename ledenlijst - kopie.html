@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Admin – Ledenbeheer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { --bg:#f6f7f9; --card:#fff; --text:#111827; --muted:#6b7280; --line:#e5e7eb; --brand:#0d6efd; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); }
+    header, footer { padding:16px 20px; }
+    main { padding:20px; max-width:1100px; margin:0 auto; display:grid; gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+    h1 { margin:0 0 8px; font-size:24px; }
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; }
+    input, select { padding:8px 10px; border:1px solid var(--line); border-radius:8px; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; border-bottom:1px solid var(--line); padding:10px; font-size:14px; }
+    th { background:#fafafa; }
+    .actions a { margin-right:8px; text-decoration:none; color:var(--brand); font-weight:600; }
+    footer { text-align:center; color:var(--muted); font-size:12px; }
+    footer a { color:inherit; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header><a href="admin-dashboard.html" class="muted">← Terug naar admin</a></header>
+  <main>
+    <div class="card">
+      <h1>Ledenbeheer</h1>
+      <div class="toolbar">
+        <input type="text" placeholder="Zoek op naam, e‑mail of telefoon">
+        <a href="#" class="actions" style="text-decoration:none; background:#eef2ff; padding:8px 10px; border-radius:8px; font-weight:700; color:#3730a3;">+ Nieuw lid</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Naam</th>
+            <th>Username</th>
+            <th>Telefoon</th>
+            <th>E‑mail</th>
+            <th>Admin</th>
+            <th>Bijzonderheden</th>
+            <th>Acties</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sophie de Vries</td>
+            <td>sdevries</td>
+            <td>0612345678</td>
+            <td>sophie@example.com</td>
+            <td>✖</td>
+            <td>Vegetarisch</td>
+            <td class="actions">
+              <a href="#">✉️ Uitnodigen</a>
+              <a href="#">🟢 WhatsApp</a>
+              <a href="#">🔑 Reset</a>
+              <a href="#">✏️ Edit</a>
+              <a href="#">🗑️ Verwijder</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Marcel Janssen</td>
+            <td>marcel</td>
+            <td>0611223344</td>
+            <td>marcel@example.com</td>
+            <td>✔</td>
+            <td>—</td>
+            <td class="actions">
+              <a href="#">✉️ Uitnodigen</a>
+              <a href="#">🟢 WhatsApp</a>
+              <a href="#">🔑 Reset</a>
+              <a href="#">✏️ Edit</a>
+              <a href="#">🗑️ Verwijder</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="muted">Let op: reset door admin kan altijd direct; “wachtwoord vergeten” op login vereist verificatie.</p>
+    </div>
+  </main>
+  <footer>© 2025 De Stichting | <a href="#" target="_blank">Algemene Voorwaarden</a></footer>
+</body>
+</html>

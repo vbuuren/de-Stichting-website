@@ -1,0 +1,46 @@
+<!doctype html><html lang="nl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wie ging mee</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head><body>
+<header>
+  <h1>Wie met welke dag is meegeweest</h1>
+  <button class="admin-btn" onclick="location.href='leden.html'">← Terug</button>
+</header>
+<div class="container">
+  <div class="section">
+    <div class="form-row">
+      <input type="date" id="from">
+      <input type="date" id="to">
+      <button class="btn" onclick="load()">Toon</button>
+    </div>
+  </div>
+  <div class="section">
+    <table class="table" id="tbl">
+      <thead>
+        <tr><th>Datum</th><th>Uitje</th><th>Deelnemers</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+</div>
+<script>
+const BASE_URL='http://127.0.0.1:3000';
+const token=localStorage.getItem('token');
+
+async function load(){
+  const f=document.getElementById('from').value, t=document.getElementById('to').value;
+  const q=new URLSearchParams(); if(f)q.set('from',f); if(t)q.set('to',t);
+  const res=await fetch(`${BASE_URL}/reports/attendance?${q.toString()}`,{headers:{Authorization:'Bearer '+token}});
+  const data=await res.json();
+  document.getElementById('rows').innerHTML = data.map(r=>`
+    <tr>
+      <td>${new Date(r.datum).toLocaleDateString('nl-NL')}</td>
+      <td>${r.titel}</td>
+      <td>${r.deelnemers.map(d=>d.naam).join(', ')}</td>
+    </tr>
+  `).join('');
+}
+load();
+</script>
+</body></html>
